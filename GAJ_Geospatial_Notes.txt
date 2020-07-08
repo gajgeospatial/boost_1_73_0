@@ -1,0 +1,60 @@
+Build Instructions
+Prebuild
+1) Cd to (BoostRoot) 
+2) Bootstrap.bat (Creates bjam)
+3) Modify boostcpp.jam - remove <arch-and-model> from line under if $(layout) = versioned
+   Note this change in 1.73 see delta between boostcpp.jam and boostcpp_orig.jam in 1.73
+4) Boost changed from bjam to b2 so replace bjam with b2 for the rest of this document
+VS2010
+1) Open Visual Studio 2010 Command Prompt
+2) CD to this directory (BoostRoot)
+3) bjam --toolset=msvc-10.0 --build-type=complete stage
+4) move files from stage\lib to stage\win32\lib
+5) bjam --toolset=msvc-10.0 address-model=64 --build-type=complete stage
+6) move files from stage\lib to stage\X64\lib
+7) !!!Clear the contents of bin.v2
+VS2012
+8) Open Visual Studio 2012 Command Prompt
+9) CD to this directory
+10) bjam --toolset=msvc-11.0 --build-type=complete stage
+11) move files from stage\lib to stage\win32\lib
+12) bjam --tooset=msvc-11.0 address-model=64 --build-type=complete stage
+13) move files from stage\lib to stage\X64\lib
+14) Clear the contents of bin.v2
+VS2013
+8) Open Visual Studio 2013 Command Prompt
+9) CD to this directory
+10) bjam --toolset=msvc-12.0 --build-type=complete stage
+11) move files from stage\lib to stage\win32\lib
+12) bjam --tooset=msvc-12.0 address-model=64 --build-type=complete stage
+13) move files from stage\lib to stage\X64\lib
+14) Clear the contents of bin.v2
+15) remove stage/lib
+VS2015
+16) Open Visual Studio 2015 Command Prompt
+17) CD to this directory
+18) bjam --toolset=msvc-14.0 --build-type=complete stage
+19) move files from stage\lib to stage\win32\lib
+20) bjam --tooset=msvc-14.0 address-model=64 --build-type=complete stage
+21) move files from stage\lib to stage\X64\lib
+22) Clear the contents of bin.v2
+23) remove stage/lib
+VS2017
+16) Open Visual Studio 2017 Command Prompt
+17) CD to this directory
+18) bjam --toolset=msvc-14.1 --build-type=complete stage
+19) move files from stage\lib to stage\win32\lib
+20) bjam --tooset=msvc-14.1 address-model=64 --build-type=complete stage
+21) move files from stage\lib to stage\X64\lib
+22) Clear the contents of bin.v2
+23) remove stage/lib
+VS2019
+16) Open Visual Studio 2019 Command Prompt
+17) CD to this directory
+18) bjam --toolset=msvc-14.2 --build-type=complete stage
+19) move files from stage\lib to stage\win32\lib
+20) bjam --tooset=msvc-14.2 address-model=64 --build-type=complete stage
+21) move files from stage\lib to stage\X64\lib
+22) Clear the contents of bin.v2
+23) remove stage/lib
+

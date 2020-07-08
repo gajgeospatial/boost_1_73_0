@@ -1,0 +1,1 @@
+.\b2.exe --tooset=msvc-14.2 address-model=64 --build-type=complete stage --stagedir=.\stage\x64
